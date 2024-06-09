@@ -1,16 +1,14 @@
+import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
-import './views/custom-elemen/hero';
-import './views/custom-elemen/nav';
-import './views/custom-elemen/header';
+import '../scripts/views/item-template/hero';
+import '../scripts/views/item-template/header';
 import App from './views/app';
 
-
 const app = new App({
-  button: document.querySelector('#menu'),
-  drawer: document.querySelector('#drawer'),
-  hero: document.querySelector('hero-section'),
-  content: document.querySelector('#maincontent'),
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#mainContent'),
 });
 
 window.addEventListener('hashchange', () => {
@@ -19,5 +17,4 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
- 
 });

@@ -1,36 +1,34 @@
-const homePage = {
+
+import { createMovieItemTemplate } from '../templates/template-creator';
+
+const HomePage = {
   async render() {
     return `
-      <hero-section></hero-section>
-      <br>
-      <div tabindex="0" class="restaurant-item">
-        <video width="100%" height="350" controls>
-          <source src="../../../public/videos/tutorial.mp4" type="video/mp4" alt="tutorial-video">
-          Your browser does not support the video tag.
-        </video>
-        <div class="container">
-          <div class="card">
-            <img src="images/heros/sawah-3.jpeg" alt="Gambar Produk" class="card-image">
-            <h3 class="card-title"><a href="#">Petani Bogor</a></h3>
-            <p class="card-description">lorem ipsum</p>
-          </div>
-
-          <div class="card">
-            <img src="images/heros/sawah-2.jpeg" alt="Gambar Produk" class="card-image">
-            <h3 class="card-title"><a href="#">Petani Bekasi</a></h3>
-            <p class="card-description">lorem ipsum</p>
-          </div>
-
-          <div class="card">
-            <img src="images/heros/sawah-1.jpeg" alt="Gambar Produk" class="card-image">
-            <h3 class="card-title"><a href="#">Petani Semarang</a></h3>
-            <p class="card-description">lorem ipsum</p>
-          </div>
+  
+      <div class="content">
+        <h2 class="content__heading">Now Menu Investasi </h2>
+        <div id="movies" class="movies">
         </div>
       </div>
-      <img src="../../../public/images/heros/investment.jpeg" alt="investment-images">
     `;
+  },
+
+afterRender() {
+    const movies =[
+      { id: '1', title: 'Investasi 1', director: 'Director 1', year: 2022, poster: 'petani-1.jpg', rating: 8.5,text:'kabyegfygefygfeuigefugefiefuefuefefigfeugefuguiegufegefedvyigefiygefiegegfgefiugefuigeiueguiegueigefuiegfiuef' },
+      { id: '2', title: 'Investasi Petani 2', director: 'Director 2', year: 2023, poster: 'petani2.jpg', rating: 7.9,text:'kabyegfygefygfeuigefugefiefuefuefefigfeugefuguiegufegefedvyigefiygefiegegfgefiugefuigeiueguiegueigefuiegfiuef' },
+      { id:'3', title: 'Investasi Petani 3', director : 'director 3', year : 2024, poster: 'petani-1.jpg', rating : 7.9,text:'kabyegfygefygfeuigefugefiefuefuefefigfeugefuguiegufegefedvyigefiygefiegegfgefiugefuigeiueguiegueigefuiegfiuef'},
+      { id:'4', title: 'Investasi Petani 3', director : 'director 3', year : 2024, poster: 'petani-1.jpg', rating : 7.9,text:'kabyegfygefygfeuigefugefiefuefuefefigfeugefuguiegufegefedvyigefiygefiegegfgefiugefuigeiueguiegueigefuiegfiuef'}, { id:'5', title: 'Investasi Petani 3', director : 'director 3', year : 2024, poster: 'petani-1.jpg', rating : 7.9,text:'kabyegfygefygfeuigefugefiefuefuefefigfeugefuguiegufegefedvyigefiygefiegegfgefiugefuigeiueguiegueigefuiegfiuef'},
+    ];
+    const moviesContainer = document.querySelector('#movies');
+    
+    // Iterasi melalui array movies dan tambahkan setiap item ke moviesContainer
+    movies.forEach(movie => {
+      // Buat template untuk setiap item film dan tambahkan ke moviesContainer
+      moviesContainer.innerHTML += createMovieItemTemplate(movie);
+    });
+    
   },
 };
 
-export default homePage;
+export default HomePage;

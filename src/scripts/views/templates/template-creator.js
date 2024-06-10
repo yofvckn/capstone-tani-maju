@@ -1,4 +1,5 @@
-import CONFIG from '../../globals/config';
+import CONFIG from "../../globals/config";
+import routes from "../../routes/routes";
 
 const createMovieDetailTemplate = (movie) => `
   <h2 class="movie__title">aku</h2>
@@ -37,7 +38,7 @@ const createMovieItemTemplate = (movie) => `
   </div>
 `;
 
-const createInvestasiTemplate = (movie)=>`
+const createInvestasiTemplate = (movie) => `
   
      
         <div class="section">
@@ -49,7 +50,7 @@ const createInvestasiTemplate = (movie)=>`
             <p>${movie.deskripsi}</p>
         </div>
         <div class="section">
-            <h2>${movie['informasi-saham']}</h2>
+            <h2>${movie["informasi-saham"]}</h2>
             <table class="info-table">
                 <tr>
                     <th>${movie.nama_saham}</th>
@@ -61,37 +62,36 @@ const createInvestasiTemplate = (movie)=>`
                 </tr>
                 <tr>
                     <th>${movie.perubahan}</th>
-                    <td>${movie['harga-perlembar']}</td>
+                    <td>${movie["harga-perlembar"]}</td>
                 </tr>
                 <tr>
                     <th>${movie.volume_perdagangan}</th>
-                    <td>${movie['harga-perlembar']}</td>
+                    <td>${movie["harga-perlembar"]}</td>
                 </tr>
             </table>
         </div>
         <div class="section">
-            <h2>${movie['detail-saham']}</h2>
+            <h2>${movie["detail-saham"]}</h2>
             <p>${movie.deskripsi_saham}</p>
         </div>
         <div class="section contact-info">
             <h2>${movie.kontak}</h2>
             <p>
-                <strong>${movie['judul-alamat']}</strong> ${movie.deskripsi_alamat}<br>
+                <strong>${movie["judul-alamat"]}</strong> ${movie.deskripsi_alamat}<br>
                 <strong>Email:</strong> ${movie.email}<br>
-                <strong>Telepon:</strong> ${movie['nomer-telepon']}
+                <strong>Telepon:</strong> ${movie["nomer-telepon"]}
             </p>
         </div>
         <div class="section business-report">
-            <h2>${movie['deskripsi-laporan']}</h2>
+            <h2>${movie["deskripsi-laporan"]}</h2>
             <p>
-                ${movie['deskripsi-laporan']} <a href="http://www.ptinvestasi.com/reports" target="_blank">halaman laporan bisnis kami</a>.
+                ${movie["deskripsi-laporan"]} <a href="http://www.ptinvestasi.com/reports" target="_blank">halaman laporan bisnis kami</a>.
             </p>
         </div>
     </div>
     `;
 
-
-    const createTutorialTemplate = () => `
+const createTutorialTemplate = () => `
     <div class="container">
         <h1>Memulai Investasi</h1>
         <p>
@@ -123,7 +123,7 @@ const createInvestasiTemplate = (movie)=>`
       </div>
     `;
 
-    const createContacTemplate =() =>`
+const createContacTemplate = () => `
     <div class="container">
         <h1>Contact Us</h1>
         <form>
@@ -140,64 +140,43 @@ const createInvestasiTemplate = (movie)=>`
         </form>
       </div>`;
 
+const createRegisterTemplate = () => `
+<div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
 
-const createRegisterTemplate = () =>`
-<a href="https://front.codes/" class="logo" target="_blank">
-		</a>
-		<div class="">
-		  <div class="container">
-			<div class="row full-height justify-content-center">
-			  <div class="col-12 text-center align-self-center py-5">
-				<div class="section pb-5 pt-5 pt-sm-2 text-center">
-				  <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
-				  <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-				  <label for="reg-log"></label>
-				  <div class="card-3d-wrap mx-auto">
-					<div class="card-3d-wrapper">
-					  <div class="card-front">
-						<div class="center-wrap">
-						  <div class="section text-center">
-							<h4 class="mb-4 pb-3">Log In</h4>
-							<div class="form-group">
-							  <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-							  <i class="input-icon uil uil-at"></i>
-							</div>
-							<div class="form-group mt-2">
-							  <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-							  <i class="input-icon uil uil-lock-alt"></i>
-							</div>
-							<a href="#/dashboard" class="btn mt-4">submit</a>
-							<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
-						  </div>
-						</div>
-					  </div>
-					  <div class="card-back">
-						<div class="center-wrap">
-						  <div class="section text-center">
-							<h4 class="mb-4 pb-3">Sign Up</h4>
-							<div class="form-group">
-							  <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-							  <i class="input-icon uil uil-user"></i>
-							</div>
-							<div class="form-group mt-2">
-							  <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-							  <i class="input-icon uil uil-at"></i>
-							</div>
-							<div class="form-group mt-2">
-							  <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-							  <i class="input-icon uil uil-lock-alt"></i>
-							</div>
-							<a href="#" class="btn mt-4">submit</a>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" id="registerBtn">Register</button>
+        </form>
+    </div>
 `;
-export { createMovieItemTemplate, createMovieDetailTemplate,createInvestasiTemplate,createTutorialTemplate,createContacTemplate,createRegisterTemplate
-  };
+
+const createLoginTemplate = () => `
+<div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" id="loginBtn" ><a href="/#/dashboard/">Login</a></button>
+        </form>
+
+        <p>Belum punya akun? <a href="/#/register/">Daftar di sini</a></p>
+    </div>
+`;
+export {
+  createMovieItemTemplate,
+  createMovieDetailTemplate,
+  createInvestasiTemplate,
+  createTutorialTemplate,
+  createContacTemplate,
+  createRegisterTemplate,
+  createLoginTemplate,
+};

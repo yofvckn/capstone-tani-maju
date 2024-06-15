@@ -530,12 +530,41 @@ body {
   margin-bottom: 30px;
 }
 
-.hero-panduan .btn {
-  padding: 15px 30px;
-  background-color: rgb(219, 216, 227);
+.hero-panduan .action ul {
+  left: -10%;
+  top: 110%;
+}
+
+.action ul .panduan-li-action-left span {
+  background-color: rgb(0, 125, 209);
   font-weight: bold;
   border-radius: 6px;
-  color: black;
+  color: rgb(219, 216, 227);
+  padding: 15px;
+}
+
+.action ul .panduan-li-action-left span:hover {
+  background-color: rgb(52, 255, 106);
+  font-weight: bold;
+  border-radius: 6px;
+  color: rgb(11, 10, 14);
+  padding: 15px;
+}
+
+.action ul .panduan-li-action-right span {
+  background-color: rgb(227, 18, 18);
+  font-weight: bold;
+  border-radius: 6px;
+  color: rgb(219, 216, 227);
+  padding: 15px;
+}
+
+.action ul .panduan-li-action-right span:hover {
+  background-color: rgb(52, 255, 106);
+  font-weight: bold;
+  border-radius: 6px;
+  color: rgb(11, 10, 14);
+  padding: 15px;
 }
 
 .hero-panduan .btn:hover {
@@ -1038,11 +1067,11 @@ footer .footer-about .newsletter button {
 }
 
 .form-container {
-  background-color: #fff;
+  background-color: rgb(83, 131, 146);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #0b0707;
+  color: #000000;
 }
 
 .form-container h1 {

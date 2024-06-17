@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tani Maju</title>
-    <link rel="stylesheet" href="../styles/styles.css" />
-  </head>
-  <body>
-    <!-- Navbar-Start -->
-    <header class="navbar">
-      <div class="navbar-hamburger">
-        <button id="navbar-hamburger">☰</button>
-      </div>
-      <div>
-        <h1 class="navbar-logo">
-          <div>
-            <img src="../public/img/logo/logo.jpg" rel="icon" alt="Logo" />
-          </div>
-          <a href="./index.html"><span>Tani Maju</span></a>
-        </h1>
-      </div>
-      <nav id="navbar-li" class="navbar-li">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./panduan.html">Panduan</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./register-login.html">Register/Login</a></li>
-          <li><a href="./register-login.html">Logout</a></li>
-          <li><a href="./about.html">About</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- Navbar-End -->
-
-    <main class="form-main-container">
+/* eslint-disable import/prefer-default-export */
+const creatDaftarkanBisnisTemplate = () => `
+<main class="form-main-container">
       <div class="form-container">
         <h1>Registration Form</h1>
         <form>
@@ -161,38 +128,7 @@
           </div>
         </form>
       </div>
-    </main>
-
-    <footer>
-      <div class="footer-about">
-        <div class="newsletter">
-          <h3>Newsletter</h3>
-          <p>Dolor amet sit justo amet elitr clita ipsum elitr est...</p>
-          <input type="email" placeholder="Enter your email" />
-          <button>Signup</button>
-        </div>
-        <div class="explore">
-          <h3>Explore</h3>
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./panduan.html">Panduan</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="contact-info">
-          <h3>Contact Info</h3>
-          <p>123 Street, New York, USA</p>
-          <p>Email: info@investacompany.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="popular-posts">
-          <h3>Popular Post</h3>
-          <p>Investment Planning Business</p>
-          <p>Get the Best Financial Advices</p>
-          <p>How to grow your business with digital solutions</p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    </main>`;
+export {
+  creatDaftarkanBisnisTemplate,
+};

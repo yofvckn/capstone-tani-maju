@@ -1,0 +1,75 @@
+{
+    "cards": [
+      {
+        "img": "petani-1.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 4.000.000.000",
+        "distribution": "3 Kali"
+      },
+      {
+        "img": "petani-2.jpg",
+        "city": "Bogor Selatan",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 3.000.000.000",
+        "distribution": "3 Kali"
+      },
+      {
+        "img": "petani-3.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 3.000.000.000",
+        "distribution": "2 Kali"
+      },
+      {
+        "img": "petani-4.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      },
+      {
+        "img": "petani-5.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      },
+      {
+        "img": "petani-6.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      },
+      {
+        "img": "petani-7.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      },
+      {
+        "img": "petani-8.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      },
+      {
+        "img": "petani-9.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      },
+      {
+        "img": "petani-10.jpg",
+        "city": "Bogor",
+        "title": "Bogor Jaya",
+        "estimation": "Rp 2.500.000.000",
+        "distribution": "5 Kali"
+      }
+    ]
+  }
+  

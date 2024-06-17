@@ -1,240 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tani Maju</title>
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="icon" href="./icon.jpg" />
-  </head>
-  <body>
-    <!-- Navbar-Start -->
-    <header class="navbar">
-      <div class="navbar-hamburger">
-        <button id="navbar-hamburger">☰</button>
-      </div>
-      <div>
-        <h1 class="navbar-logo">
-          <div>
-            <img src="../public/img/logo/logo.jpg" rel="icon" alt="Logo" />
-          </div>
-          <a href="./index.html"><span>Tani Maju</span></a>
-        </h1>
-      </div>
-      <nav id="navbar-li" class="navbar-li">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./panduan.html">Panduan</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./daftarkan-bisnis.html">Dashboard</a></li>
-          <li><a href="./register-login.html">Register/Login</a></li>
-          <li><a href="./register-login.html">Logout</a></li>
-          <li><a href="./about.html">About</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- Navbar-End -->
-
-    <!-- Hero Section-start -->
-    <section class="hero" id="home">
-      <div>
-        <img
-          src="../public/img/hero-image.jpg"
-          alt="hero-img"
-          class="hero-img"
-        />
-      </div>
-      <div class="hero-container">
-        <main class="hero-content">
-          <h1><span>Urun Dana Investasi Bisnis Saham Tani</span></h1>
-          <br />
-          <p>
-            Platform Equity Crowdfunding pertama yang berizin dan diawasi
-            Otoritas Jasa Keuangan berdasarkan Surat Keputusan Nomor:
-            KEP-59/D.04/2019.
-          </p>
-        </main>
-      </div>
-    </section>
-    <div class="action">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free movie catalogue for you">
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Investasi Catalogue</title>
+   
+</head>
+<body>
+  <header class="app-bar">
+    <div class="app-bar__menu">
+      <button id="hamburgerButton">☰</button>
+    </div>
+    <div class="app-bar__brand">
+      <h1>Tani Maju</h1>
+    </div>
+    <nav id="navigationDrawer" class="app-bar__navigation">
       <ul>
-        <li class="li-action-left">
-          <a type="button" href="./mulai-investasi.html"
-            ><span>Mulai Investasi</span></a
-          >
-        </li>
-        <li class="li-action-right">
-          <a type="button" href="./daftarkan-bisnis.html"
-            ><span>Daftarkan Bisnis</span></a
-          >
-        </li>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/panduan">Panduan</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/daftarkanbisnis">Dashboard</a></li>
+        <li><a href="#/registerlogin">Register/Login</a></li>
+        <li><a href="#/registerlogin">Logout</a></li>
+        <li><a href="#/about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+<main id="mainContent"></main>
+<footer>
+  <div class="footer-about">
+    <div class="newsletter">
+      <h3>Newsletter</h3>
+      <p>Dolor amet sit justo amet elitr clita ipsum elitr est...</p>
+      <input type="email" placeholder="Enter your email" />
+      <button>Signup</button>
+    </div>
+    <div class="explore">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/panduan">Panduan</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/about">About</a></li>
       </ul>
     </div>
-    <!-- Hero Section-end -->
-
-    <!-- Card Section-Start -->
-    <section id="section-card" class="section-card">
-      <div class="title-card">
-        <h2>
-          <span>Mulailah Berbisnis Dengan Mitra Kami</span>
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
-          repellendus numquam quam tempora voluptatum.
-        </p>
-      </div>
-      <div class="container">
-        <div class="card">
-          <img src="../public/img/card/petani-1.jpg" alt="petani-1" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 4.000.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp175.281.233</p>
-          <p class="distribution">Pembagian Dividen: 3 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-2.jpg" alt="petani-2" />
-          <div class="city">Bogor Selatan</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 3.000.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp230.820.693</p>
-          <p class="distribution">Pembagian Dividen: 3 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-3.jpg" alt="petani-3" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 3.000.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp107.875.279</p>
-          <p class="distribution">Pembagian Dividen: 2 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-4.jpg" alt="petani-4" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-5.jpg" alt="petani-5" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-6.jpg" alt="petani-6" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-7.jpg" alt="petani-7" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-8.jpg" alt="petani-8" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-9.jpg" alt="petani-9" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-        <div class="card">
-          <img src="../public/img/card/petani-10.jpg" alt="petani-10" />
-          <div class="city">Bogor</div>
-          <h3>Bogor Jaya</h3>
-          <p class="amount">Total Pendanaan Rp 2.500.000.000</p>
-          <p class="dividend">Deviden Dibagikan: Rp234.076.142</p>
-          <p class="distribution">Pembagian Dividen: 5 Kali</p>
-          <a type="button" class="button-card" href="./detail.html">
-            <span>Selengkapnya</span>
-          </a>
-        </div>
-      </div>
-      <div class="navigation">
-        <button id="prevBtn">Prev</button>
-        <button id="nextBtn">Next</button>
-      </div>
-    </section>
-
-    <!-- Card Section-End -->
-
-    <footer>
-      <div class="footer-about">
-        <div class="newsletter">
-          <h3>Newsletter</h3>
-          <p>Dolor amet sit justo amet elitr clita ipsum elitr est...</p>
-          <input type="email" placeholder="Enter your email" />
-          <button>Signup</button>
-        </div>
-        <div class="explore">
-          <h3>Explore</h3>
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./panduan.html">Panduan</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="contact-info">
-          <h3>Contact Info</h3>
-          <p>123 Street, New York, USA</p>
-          <p>Email: info@investacompany.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="popular-posts">
-          <h3>Popular Post</h3>
-          <p>Investment Planning Business</p>
-          <p>Get the Best Financial Advices</p>
-          <p>How to grow your business with digital solutions</p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="../scripts/script.js"></script>
-  </body>
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <p>123 Street, New York, USA</p>
+      <p>Email: info@investacompany.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+    <div class="popular-posts">
+      <h3>Popular Post</h3>
+      <p>Investment Planning Business</p>
+      <p>Get the Best Financial Advices</p>
+      <p>How to grow your business with digital solutions</p>
+    </div>
+  </div>
+</footer>
+</body>
 </html>
+

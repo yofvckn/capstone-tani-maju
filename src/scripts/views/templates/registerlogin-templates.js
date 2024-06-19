@@ -5,16 +5,16 @@ const createRegisterLoginTemplate = () => `
       <form action="">
         <h2>Sign Up</h2>
         <div class="input-group">
-          <input type="text" required />
-          <label for="">Username</label>
+          <input type="text" name="username" required />
+          <label for="username">Username</label>
         </div>
         <div class="input-group">
-          <input type="email" required />
-          <label for="">Email</label>
+          <input type="email" name="email" required />
+          <label for="email">Email</label>
         </div>
         <div class="input-group">
-          <input type="password" required />
-          <label for="">Password</label>
+          <input type="password" name="password" required />
+          <label for="password">Password</label>
         </div>
         <button type="submit" class="btn-login">Sign Up</button>
         <div class="sign-link">
@@ -30,12 +30,12 @@ const createRegisterLoginTemplate = () => `
       <form action="">
         <h2>Login</h2>
         <div class="input-group">
-          <input type="text" required />
-          <label for="">Username</label>
+          <input type="text" name="username" required />
+          <label for="username">Username</label>
         </div>
         <div class="input-group">
-          <input type="password" required />
-          <label for="">Password</label>
+          <input type="password" name="password" required />
+          <label for="password">Password</label>
         </div>
         <div class="forgot-pass">
           <a href="#">Forgot Password?</a>
@@ -50,9 +50,6 @@ const createRegisterLoginTemplate = () => `
     </div>
   </div>
 `;
-
-// Export the template function
-export { createRegisterLoginTemplate };
 
 // Function to add event listeners for form toggle
 const addFormToggleEventListeners = () => {
@@ -77,5 +74,77 @@ const addFormToggleEventListeners = () => {
   }
 };
 
-// Export the function to add event listeners
-export { addFormToggleEventListeners };
+const addFormSubmitEventListeners = () => {
+  const signUpForm = document.querySelector('.sign-up form');
+  const signInForm = document.querySelector('.sign-in form');
+
+  if (signUpForm) {
+    signUpForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(signUpForm);
+      const username = formData.get('username');
+      const email = formData.get('email');
+      const password = formData.get('password');
+
+      try {
+        const response = await fetch('http://localhost:3000/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, email, password }),
+        });
+
+        if (response.ok) {
+          alert('Registration successful');
+          window.location.hash = '#/login';
+        } else {
+          const error = await response.json();
+          alert(`Registration failed: ${error.message}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  } else {
+    console.error('Sign-up form not found.');
+  }
+
+  if (signInForm) {
+    signInForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(signInForm);
+      const username = formData.get('username');
+      const password = formData.get('password');
+
+      try {
+        const response = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          localStorage.setItem('token', data.token);
+          alert('Login successful');
+          window.location.hash = '#/';
+        } else {
+          const error = await response.json();
+          alert(`Login failed: ${error.message}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  } else {
+    console.error('Sign-in form not found.');
+  }
+};
+
+// Export the functions
+export { createRegisterLoginTemplate, addFormToggleEventListeners, addFormSubmitEventListeners };

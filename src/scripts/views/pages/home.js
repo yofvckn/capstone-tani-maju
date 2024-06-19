@@ -2,8 +2,6 @@ const HomePage = {
   async render() {
     return `
       <hero-section></hero-section>
-
-      <!-- Card Section-Start -->
       <section id="section-card" class="section-card">
         <div class="title-card">
           <h2>
@@ -15,7 +13,6 @@ const HomePage = {
           </p>
         </div>
         <div class="container">
-          <!-- Konten kartu akan dimuat di sini -->
         </div>
         <div class="navigation">
           <button id="prevBtn">Prev</button>
@@ -26,28 +23,37 @@ const HomePage = {
   },
 
   async afterRender() {
-    // Memanggil data JSON setelah render
-    import('../../data/data.json').then(({ default: jsonData }) => {
-      console.log(jsonData);
-      const dataPetani = jsonData.cards;
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:3000/products', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch products');
+      }
+
+      const dataPetani = await response.json();
       let listPetani = '';
       dataPetani.forEach((card) => {
         listPetani += `
           <div class="card">
-            <img class="img" src="img/card/${card.img}" alt="${card.title}" title="${card.title}">
+            <img class="img" src="http://localhost:3000${card.cover.url}" alt="${card.brandName}" title="${card.brandName}">
             <div class="city">${card.city}</div>
-            <h3>${card.title}</h3>
-            <p class="amount">Perkiraan Dana yang Dibutuhkan ${card.estimation}</p>
-            <p class="distribution">Pembagian Dividen: ${card.distribution}</p>
-            <a type="button" class="button-card" href="#/detail">
+            <h3>${card.brandName}</h3>
+            <p class="amount">Perkiraan Dana yang Dibutuhkan ${card.estimatedFund}</p>
+            <p class="distribution">Pembagian Dividen: ${card.estimatedDividend}</p>
+            <a type="button" class="button-card" href="#/detail/${card.id}">
               <span>Selengkapnya</span>
             </a>
           </div>
         `;
       });
+
       document.querySelector('#section-card .container').innerHTML = listPetani;
 
-      // Tambahkan event listener untuk tombol prev dan next
       const container = document.querySelector('.container');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
@@ -60,7 +66,6 @@ const HomePage = {
         container.scrollBy({ left: 300, behavior: 'smooth' });
       });
 
-      // Implementasi drag-to-scroll
       let isDown = false;
       let startX;
       let scrollLeft;
@@ -89,7 +94,9 @@ const HomePage = {
         const walk = (x - startX) * 1;
         container.scrollLeft = scrollLeft - walk;
       });
-    });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   },
 };
 

@@ -1,3 +1,4 @@
+// App.js
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
@@ -18,14 +19,19 @@ class App {
       content: this._content,
     });
 
-    // kita bisa menginisiasikan komponen lain bila ada
+    // Initialize other components if needed
   }
 
   async renderPage() {
-    const url = UrlParser.parseActiveUrlWithCombiner();
+    const url = UrlParser.parseActiveUrlWithoutCombiner(); // Use correct function name
     const page = routes[url];
-    this._content.innerHTML = await page.render();
-    await page.afterRender();
+    if (page) {
+      this._content.innerHTML = await page.render();
+      await page.afterRender();
+    } else {
+      // Handle page not found
+      this._content.innerHTML = '<p>Page not found</p>';
+    }
   }
 }
 

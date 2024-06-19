@@ -17,7 +17,7 @@ const routes = {
   '/mulaiinvestasi': mulaiInvestasi,
   '/panduan': panduanPage,
   '/about': aboutPage,
-  '/detail': detailPage,
+  '/detail/:id': detailPage,
   '/registerlogin': registerPage,
 };
 export default routes;

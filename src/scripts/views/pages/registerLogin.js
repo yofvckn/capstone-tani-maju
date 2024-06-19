@@ -1,4 +1,4 @@
-import { createRegisterLoginTemplate, addFormToggleEventListeners } from '../templates/registerlogin-templates';
+import { createRegisterLoginTemplate, addFormToggleEventListeners, addFormSubmitEventListeners } from '../templates/registerlogin-templates';
 
 const registerPage = {
   async render() {
@@ -15,6 +15,7 @@ const registerPage = {
       petaniContainer.innerHTML = createRegisterLoginTemplate();
       // Add event listeners after the template is rendered
       addFormToggleEventListeners();
+      addFormSubmitEventListeners();
     } else {
       console.error("Element with id 'petani' not found.");
     }

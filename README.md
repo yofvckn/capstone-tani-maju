@@ -12,7 +12,7 @@ In the terminal
 ```
 $ cd capstone-tani-maju
 $ npm install
-$ npm run dev
+$ npm run start-dev
 ```
 ## Technologies used
 
